@@ -1,0 +1,48 @@
+.side-menu{
+  margin: 0;
+  min-width: 250px;
+  padding: 24px 8px;
+  overflow-y: auto;
+  /* overflow: hidden; */
+}
+.side-menu::-webkit-scrollbar{
+  display: none;
+}
+.side-menu > ul{
+  margin-top: 8px;
+}
+.side-menu > ul:nth-child(1){
+  margin-top: 0;
+}
+.side-menu > ul > .menu-title{
+  font-family:"MinSans-900";
+  font-size: 1.125rem;
+  color: #222;
+  padding: 16px;
+}
+
+.side-menu > ul > .sub-title{
+  font-family:"MinSans-500";
+  font-size: 1rem;
+}
+.side-menu > ul > .sub-title > a{
+  text-decoration: none;
+  color: #111827;
+  display: block;
+  width: 100%;
+  padding: 16px;
+}
+.side-menu > ul > li{
+  font-family:"MinSans-400";
+  font-size: 0.875rem;
+}
+.side-menu > ul > li > a{
+  text-decoration: none;
+  color: #636871;
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+}
+
+
+

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./layout/Header";
+import Body from "./layout/Body";
+import Grid from "./common/Grid";
+import GridGap from "./contents/demoCode/gridGap";
+
+const GlobalStyles = createGlobalStyle`
+  ${reset};
+`;
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyles />
+      
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Body />} />
+          <Route path="/document/*" element={<Body />} />
+          <Route path="/new" element={<Grid />} />
+          <Route path="/new/gridGap" element={<GridGap />} />
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.layoutGrid{
+  padding: 16px;
+  background: sandybrown;
+  width: 100%;
+  /* height: calc(100vh - 64px); */
+}
+.layoutGrid > .title{
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.layoutGrid > .descript{
+  background: yellowgreen;
+  padding: 16px
+}
+
+.layoutGrid > img{
+  width: 100%;
+  height: auto;  
+}
+.layoutGrid > .sub-title{
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

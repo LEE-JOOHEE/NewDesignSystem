@@ -311,13 +311,13 @@ sub{color: #bbb;}
   padding: 16px 40px;
   box-sizing: border-box;
 }
-.fix-body{
+.fixed-body{
   max-width: 1366px;
   /* max-width: 900px; */
   margin: 0 auto;
   box-sizing: border-box;
 }
-.free-body{
+.fluid-body{
   width: 100%;
   box-sizing: border-box;
 }

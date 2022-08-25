@@ -476,3 +476,23 @@
   height: 152px;
   flex-basis: calc(25% - var(--gutter));
 } */
+
+
+
+
+/* Breakpoint (반응형) */
+@media (max-width: 360px) {
+  .container{background: yellow;}
+}
+
+@media all and (min-width: 361px) and (max-width: 768px) {
+  .container{background: greenyellow;}
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px) {
+  .container{background: salmon;}
+}
+
+@media all and (min-width: 1025px) and (max-width: 1440px) {
+  .container{background: sandybrown;}
+}

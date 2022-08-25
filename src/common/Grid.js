@@ -97,6 +97,18 @@ function Grid() {
         </div>
       </div>
 
+
+      <div className="contents">
+        <div className="container grid-col-6 gap-16">
+          <div className="spBg" style={{"height":"600px"}}>1</div>
+          <div className="spBg" style={{"height":"600px"}}>2</div>
+          <div className="spBg" style={{"height":"600px"}}>3</div>
+          <div className="spBg" style={{"height":"600px"}}>4</div>
+          <div className="spBg" style={{"height":"600px"}}>5</div>
+          <div className="spBg" style={{"height":"600px"}}>6</div>
+        </div>
+      </div>
+
       
 
     </div>

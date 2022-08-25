@@ -3,6 +3,7 @@ import "./Foundation.css";
 import { Link } from "react-router-dom";
 import responsiveFixed from "../../static/images/responsive-1-fixed.svg";
 import responsiveFluid from "../../static/images/responsive-2-fluid.svg";
+import responsiveBreakPoint from "../../static/images/responsive-3-breakpoint.svg";
 
 import TopButton from "../../layout/TopButton";
 
@@ -36,6 +37,20 @@ function ResponsiveLayout() {
           </div>
           <div className="img-area-responsive">
             <img src={responsiveFluid} alt="responsive-layout-grid-fiexd-behavior" />
+          </div>
+        </div>
+
+        <div className="contents">
+          <div className="title">Breakpoint</div>
+          <div className="descript">
+          브레이크 포인트 별 대표 기기를 선정한 후 화면당 대표가 되는 그리드 규칙을 만듭니다.<br/><br/>
+          모바일 0~599px / 대표 기기 360px<br/>
+          Small Tablet 600px~1023px / 대표 기기 768px<br/>
+          Large Tablet 1024px~1439px / 대표 기기 1024px<br/>
+          Desktop 1440px~1920px / 대표 기기 1440px<br/>
+          </div>
+          <div className="img-area-responsive">
+            <img src={responsiveBreakPoint} alt="responsive-layout-grid-fiexd-behavior" />
           </div>
         </div>
 

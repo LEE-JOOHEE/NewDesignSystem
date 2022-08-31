@@ -29,7 +29,7 @@ function LayoutGrid() {
       <div className="sub-title">Breakpoint</div>
     
       <div className="sub-title">새창에서 링크열기</div>
-      <Link to="/new" target="_blank" rel="noopener noreferrer">반응형</Link>
+      <Link to="/new" target="_blank" rel="noopener">반응형</Link>
       <br/><br/>
     
     </div>

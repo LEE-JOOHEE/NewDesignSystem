@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Foundation.css";
-import { Link } from "react-router-dom";
 import responsiveFixed from "../../static/images/responsive-1-fixed.svg";
 import responsiveFluid from "../../static/images/responsive-2-fluid.svg";
 import responsiveBreakPoint from "../../static/images/responsive-3-breakpoint.svg";

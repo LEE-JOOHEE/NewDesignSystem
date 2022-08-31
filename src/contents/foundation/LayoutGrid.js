@@ -63,7 +63,7 @@ function LayoutGrid() {
                 콘텐츠 화면 구성 시 시각적으로 확인 가능한<br/>
                 컬럼 그리드 컴포넌트입니다.
               </div>
-              <Link to="/new/gridGap" target="_blank" className="go-demo" rel="noopener noreferrer">Demo</Link>
+              <Link to="/new/gridGap" target="_blank" className="go-demo" rel="noopener">Demo</Link>
             </div>
             <div className="sub-img">
               <img src={gridColumnComp} alt="grid-components" />
@@ -86,7 +86,7 @@ function LayoutGrid() {
                 화면 구성 시 시각적으로 확인 가능한<br/>
                 베이스라인 그리드 컴포넌트입니다.
               </div>
-              <Link to="/new" target="_blank" className="go-demo" rel="noopener noreferrer">Demo</Link>
+              <Link to="/new" target="_blank" className="go-demo" rel="noopener">Demo</Link>
             </div>
             <div className="sub-img">
               <img src={gridLineComp} alt="grid-components" />

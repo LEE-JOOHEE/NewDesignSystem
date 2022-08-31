@@ -327,7 +327,10 @@ function GridGap(){
             <div className="item"><div className="spRed mr-auto">mr-auto</div></div>
           </div>
         </div>
-          
+        
+
+
+
       </div>
 
       

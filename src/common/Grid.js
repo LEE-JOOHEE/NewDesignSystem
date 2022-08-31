@@ -44,12 +44,6 @@ function Grid() {
         <div className="item col-span-2">4</div>
         <div className="item col-span-2">5</div>
         <div className="item col-span-2">6</div>
-        {/* <div className="item">7</div>
-        <div className="item">8</div>
-        <div className="item">9</div>
-        <div className="item">10</div>
-        <div className="item">11</div>
-        <div className="item">12</div> */}
       </div>
 
 

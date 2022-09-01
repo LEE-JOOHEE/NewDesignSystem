@@ -478,21 +478,57 @@
 } */
 
 
+.comm-Container-auto{
+  background: fuchsia;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(7.2%, 1fr)); */
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 16px; gap: 16px;
+  padding: 0 16px;
+}
 
 
 /* Breakpoint (반응형) */
+/* S */
 @media (max-width: 360px) {
-  .container{background: yellow;}
+  .comm-Container-auto{
+    background: salmon;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .col-span-2{grid-column: span 3 / span 3;}
+  .col-span-4{
+    grid-column: 1 / span 6;
+  }
 }
-
+/* M */
 @media all and (min-width: 361px) and (max-width: 768px) {
-  .container{background: greenyellow;}
+  .comm-Container-auto{
+    background: maroon;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .col-span-2{grid-column: span 3 / span 3;}
+  .col-span-4{
+    grid-column: 1 / span 6;
+  }
 }
-
+/* L */
 @media all and (min-width: 769px) and (max-width: 1024px) {
-  .container{background: salmon;}
+  .comm-Container-auto{
+    background: lightseagreen;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .col-span-2{grid-column: span 4 / span 4;}
+  .col-span-4{
+    grid-column: 3 / span 8;
+  }
+}
+/* XL */
+@media all and (min-width: 1025px) and (max-width: 1440px) {
+  .comm-Container-auto{
+    background: lightblue;
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 
-@media all and (min-width: 1025px) and (max-width: 1440px) {
-  .container{background: sandybrown;}
-}
+
+

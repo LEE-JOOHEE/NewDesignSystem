@@ -4,12 +4,12 @@ import styled from "styled-components";
 import SideMenu from "./SideMenu";
 import Document from "./Document";
 import { Routes, Route } from "react-router-dom";
-// import LayoutGrid from "../contents/LayoutGrid";
 
 import DocHeader from "../contents/foundation/DocHeader";
 import SpacingBasics from "../contents/foundation/SpacingBasics";
 import LayoutGrid from "../contents/foundation/LayoutGrid";
 import ResponsiveLayout from "../contents/foundation/ResponsiveLayout";
+import Color from "../contents/foundation/Color";
 
 const StyleDiv = styled.div`
   height: calc(100vh - 97px);
@@ -35,7 +35,7 @@ function Body() {
         <Route path="0/layout" element={<LayoutGrid />} />
         <Route path="0/grid" element={<ResponsiveLayout />} />
 
-        <Route path="1/color" element={<Document />} />
+        <Route path="1/color" element={<Color />} />
 
         <Route path="2" element={<DocHeader />} />
         <Route path="3" element={<DocHeader />} />

@@ -1,12 +1,18 @@
 import React from "react";
-import "../foundation/Foundation.css";
+import "../../contents/foundation/Foundation.css";
 import { faFish } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TopButton from "../../layout/TopButton";
 
-function GridGap(){
+function DemoGridGap(){
 
-
+  function gridColNum(){
+    const items = [];
+    for(let i = 1; i < 13; i++){
+      items.push(<div className="item">{[i]}</div>)
+    }
+    return items;
+  }
 
   return(
     <div className="doc-wrap" style={{"minWidth" : "1440px", "overflowX" : "auto"}}>
@@ -26,21 +32,10 @@ function GridGap(){
         </div>
         <div className="ex-area">
           <div className="container grid-col-12 gap-20">
-            <div className="item">1</div>
-            <div className="item">2</div>
-            <div className="item">3</div>
-            <div className="item">4</div>
-            <div className="item">5</div>
-            <div className="item">6</div>
-            <div className="item">7</div>
-            <div className="item">8</div>
-            <div className="item">9</div>
-            <div className="item">10</div>
-            <div className="item">11</div>
-            <div className="item">12</div>
+            { gridColNum() }
           </div>
         </div>
-        
+
         <div className="number-box">Sample</div>
         <div className="ex-area mb-24">
           <div className="container grid-col-1 pb-0">
@@ -327,23 +322,10 @@ function GridGap(){
             <div className="item"><div className="spRed mr-auto">mr-auto</div></div>
           </div>
         </div>
-        
-
-
-
       </div>
-
-      
-
-
-
-
-
-
-
       <TopButton />
     </div>
   )
 }
 
-export default GridGap;
+export default DemoGridGap;

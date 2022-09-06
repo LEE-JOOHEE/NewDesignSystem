@@ -499,7 +499,7 @@
 } */
 
 
-.comm-Container-auto{
+.container-auto, .container-auto-bg{
   background: transparent;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -510,41 +510,35 @@
 /* Breakpoint (반응형) */
 /* S */
 @media (max-width: 360px) {
-  .comm-Container-auto{
+  .container-auto{grid-template-columns: repeat(6, 1fr);}
+  .container-auto-bg{
     background: lightgoldenrodyellow;
     grid-template-columns: repeat(6, 1fr);
   }
-  .col-span-1-auto{grid-column: span 2 / span 2;}
-  .col-span-2-auto{grid-column: span 3 / span 3;}
-  .col-span-4-auto{grid-column: 1 / span 6;}
+  .col-span-4-auto{grid-column: span 6 / span 6;}
 }
 /* M */
 @media all and (min-width: 361px) and (max-width: 768px) {
-  .comm-Container-auto{
+  .container-auto{grid-template-columns: repeat(6, 1fr);}
+  .container-auto-bg{
     background: lightblue;
     grid-template-columns: repeat(6, 1fr);
   }
-  .col-span-1-auto{grid-column: span 2 / span 2;}
-  .col-span-2-auto{grid-column: span 3 / span 3;}
-  .col-span-4-auto{grid-column: 1 / span 6;}
+  .col-span-4-auto{grid-column: span 6 / span 6;}
 }
 /* L */
 @media all and (min-width: 769px) and (max-width: 1024px) {
-  .comm-Container-auto{
+  .container-auto{grid-template-columns: repeat(12, 1fr);}
+  .container-auto-bg{
     background: lightgoldenrodyellow;
     grid-template-columns: repeat(12, 1fr);
-    align-items: center;
+    /* align-items: center; */
   }
-  .col-span-1-auto{grid-column: span 2 / span 2;}
-  .col-span-2-auto{grid-column: span 4 / span 4;}
-  .col-span-4-auto{grid-column: 3 / span 8;}
-
-  /* .col-span-5{grid-column: 2 / span 10;} */
-  /* .col-span-7{grid-column: span 6 / span 6;} */
 }
 /* XL */
 @media all and (min-width: 1025px) and (max-width: 1440px) {
-  .comm-Container-auto{
+  .container-auto{grid-template-columns: repeat(12, 1fr);}
+  .container-auto-bg{
     background: lightblue;
     grid-template-columns: repeat(12, 1fr);
   }

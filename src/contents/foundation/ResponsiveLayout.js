@@ -41,9 +41,10 @@ function ResponsiveLayout() {
 
         <div className="contents">
           <div className="title">Breakpoint</div>
-          <div className="descript mb-20">
+          <div className="descript mb-8">
           브레이크 포인트 별 대표 기기를 선정한 후 화면당 대표가 되는 그리드 규칙을 만듭니다.
           </div>
+          <a class="go-demo w-fit ptb-4 mb-12" rel="noopener" href="/new/demoLayoutGrid" target="_blank">Demo</a>
           <div className="descript">
             <div className="grid-col-2 gap-col-0 gap-row-8">
               <div className="bpBor">모바일 0~599px</div>

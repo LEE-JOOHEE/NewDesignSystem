@@ -1,15 +1,12 @@
-import React,{ useState, useEffect} from "react";
-import "./Grid.css";
+import React from 'react'
+import { useState, useEffect } from 'react'
+import "../../common/Grid.css";
+import "../../contents/foundation/Foundation.css";
+import TopButton from "../../layout/TopButton";
+import { faFish } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Grid() {
-
-  function gridColNum(){
-    const items = [];
-    for(let i = 1; i < 13; i++){
-      items.push(<div className="item">{[i]}</div>)
-    }
-    return items;
-  }
+function DemoLayoutGrid() {
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [viewSize, setViewSize] = useState("");
@@ -21,9 +18,6 @@ function Grid() {
     else{setViewSize("Full")}
     window.addEventListener('resize', e => {
       setWindowWidth(window.innerWidth);
-      
-
-
     });
   }, [window.innerWidth]);
 
@@ -68,7 +62,7 @@ function Grid() {
       </div>
 
       <div className="contents">
-        <div class="number-box">Code</div>
+        <div className="number-box">Code</div>
         <div className="ex-code-area">
           <p>
             &lt;div className="<b>fixed-body</b>"&gt;<br/>
@@ -114,7 +108,7 @@ function Grid() {
       </div>
 
       <div className="contents">
-        <div class="number-box">Code</div>
+        <div className="number-box">Code</div>
         <div className="ex-code-area">
           <p>
             &lt;div className="<b>fluid-body</b>"&gt;<br/>
@@ -144,14 +138,14 @@ function Grid() {
         <div className="ml-20">현재 화면의 너비는 
           <span style={{"color":"#FBBF24"}}> {windowWidth} px</span> 입니다.
           <span style={{"color":"#FBBF24"}} className="pl-8">{viewSize}</span> 사이즈 입니다.<br/>
-          <p style={{"color":"#111"}}>화면을 확대/축소 하면서 브레이크 포인트를 확인하세요.</p>
+          <p style={{"color":"#111"}}>화면을 확대/축소 하면서 브레이크 포인트를 확인 할 수 있습니다.</p>
         </div>
       </div>
       <div className="fluid-body">
-        <div className="comm-Container-auto pt-16">
+        <div className="container-auto-bg pt-16">
           <div className="item col-span-12-auto layBg">col-span-12-auto</div>
         </div>
-        <div className="comm-Container-auto pt-24">
+        <div className="container-auto-bg pt-24">
           <div className="item col-span-1-auto">col-span<br/>-1-auto</div>
           <div className="item col-span-1-auto">col-span<br/>-1-auto</div>
           <div className="item col-span-1-auto">col-span<br/>-1-auto</div>
@@ -165,141 +159,78 @@ function Grid() {
           <div className="item col-span-1-auto">col-span<br/>-1-auto</div>
           <div className="item col-span-1-auto">col-span<br/>-1-auto</div>
         </div>
-        <div className="comm-Container-auto pt-24">
-          <div className="item col-span-2-auto layBg">col-span-2-auto</div>
-          <div className="item col-span-2-auto layBg">col-span-2-auto</div>
-          <div className="item col-span-2-auto layBg">col-span-2-auto</div>
-          <div className="item col-span-2-auto layBg">col-span-2-auto</div>
-          <div className="item col-span-2-auto layBg">col-span-2-auto</div>
-          <div className="item col-span-2-auto layBg">col-span-2-auto</div>
+        <div className="container-auto-bg pt-24">
+          <div className="item col-span-2-auto layBg">col-span<br/>-2-auto</div>
+          <div className="item col-span-2-auto layBg">col-span<br/>-2-auto</div>
+          <div className="item col-span-2-auto layBg">col-span<br/>-2-auto</div>
+          <div className="item col-span-2-auto layBg">col-span<br/>-2-auto</div>
+          <div className="item col-span-2-auto layBg">col-span<br/>-2-auto</div>
+          <div className="item col-span-2-auto layBg">col-span<br/>-2-auto</div>
         </div>
-        <div className="comm-Container-auto pt-24">
+        <div className="container-auto-bg pt-24">
           <div className="item col-span-3-auto">col-span-3-auto</div>
           <div className="item col-span-3-auto">col-span-3-auto</div>
           <div className="item col-span-3-auto">col-span-3-auto</div>
           <div className="item col-span-3-auto">col-span-3-auto</div>
         </div>
-        <div className="comm-Container-auto pt-24">
+        <div className="container-auto-bg pt-24">
           <div className="item col-span-4-auto layBg">col-span-4-auto</div>
           <div className="item col-span-4-auto layBg">col-span-4-auto</div>
           <div className="item col-span-4-auto layBg">col-span-4-auto</div>
         </div>
-        <div className="comm-Container-auto pt-24 pb-16">
+        <div className="container-auto-bg pt-24 pb-16">
           <div className="item col-span-6-auto">col-span-6-auto</div>
           <div className="item col-span-6-auto">col-span-6-auto</div>
         </div>
       </div>
 
-      <div className="contents">
-        <div class="number-box">Code</div>
-        <div className="ex-code-area">
-          <p>
-            &lt;div className="fluid-body"&gt;<br/>
-            &nbsp;&nbsp;
-            &lt;div className="<b>comm-Container-auto</b> ptb-16 spBg"&gt;<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &lt;div className="item <b>col-span-4-auto</b>"&gt;1&lt;/div&gt;<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &lt;div className="item <b>col-span-4-auto</b>"&gt;2&lt;/div&gt;<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            &lt;div className="item <b>col-span-4-auto</b>"&gt;3&lt;/div&gt;<br/>
-            &nbsp;&nbsp;
-            &lt;/div&gt;<br/>
-            &lt;/div&gt;
-          </p>
-        </div>
-      </div>
-
-
-    </div>
-
-
-
-    <div className="Grid">
-
-      {/* <div className="container grid-col-12">
-        { gridColNum() }
-      </div> */}
-
-      <div className="contents">
-        <div className="comm-Header">Header</div>
-        <div className="comm-Body">
-          <div className="fluid-body">
-            
-
-            <div className="mtb-16" style={{"fontSize":"2rem"}}>예외검토</div>
-            <div className="comm-Container-auto pt-16">
-              <div className="item col-span-5" style={{"height":"auto","background":"#aaa"}}>5</div>
-              <div className="item col-span-5" style={{"height":"auto","background":"#aaa"}}>5</div>
-              <div className="item col-span-2" style={{"height":"auto","background":"#aaa"}}>2</div>
+      <div className="contents plr-16">
+        <div className="container-auto p-0 gap-24">
+          <div className="col-span-6-auto">
+            <div className="number-box">Sample</div>
+            <div className="ex-text-area">
+              <p><FontAwesomeIcon icon={faFish} size="1x" className="faFish" />
+                반응형 레이아웃을 자동으로 적용시키기 위해서</p>
+              <p className="ml-28">"container-auto" 라는 클래스를 사용합니다.</p>
+              <p><FontAwesomeIcon icon={faFish} size="1x" className="faFish" />
+                12컬럼 기준으로, 가장 단순한 반응형 구현을 위한 제한적인 구성</p>
+              <p className="ml-28">- 12컬럼을 모두 병합한 단일행 레이아웃 (col-span-12-auto)</p>
+              <p className="ml-28">- 1컬럼씩 나누는 12분할 레이아웃 (col-span-1-auto)</p>
+              <p className="ml-28">- [2-2-2-2-2-2] 6분할 레이아웃 (col-span-2-auto)</p>
+              <p className="ml-28">- [3-3-3-3] 4분할 레이아웃 (col-span-3-auto)</p>
+              <p className="ml-28">- [4-4-4] 3분할 레이아웃 (col-span-4-auto) <sub>(코드예시 참고)</sub></p>
+              <p className="ml-28">- [6-6] 2분할 레이아웃 (col-span-6-auto)</p>
             </div>
-
-            <div className="comm-Container-auto pt-16">
-              <div className="item col-span-7" style={{"height":"auto","background":"#fff"}}>7</div>
-              <div className="item col-span-5" style={{"height":"auto","background":"#fff"}}>5</div>
-            </div>
-
-            <div className="comm-Container-auto pt-16">
-              <div className="item col-span-3" style={{"height":"auto","background":"#bbb"}}>3</div>
-              <div className="item col-span-4" style={{"height":"auto","background":"#bbb"}}>4</div>
-              <div className="item col-span-5" style={{"height":"auto","background":"#bbb"}}>5</div>
-            </div>
-
-            <div className="comm-Container-auto pt-16">
-              <div className="item col-span-2" style={{"height":"auto","background":"#eee"}}>2</div>
-              <div className="item col-span-10" style={{"height":"auto","background":"#eee"}}>10</div>
-            </div>
-
-            <div className="comm-Container-auto pt-16">
-              <div className="item col-span-2" style={{"height":"auto","background":"#ccc"}}>2</div>
-              <div className="item col-span-6" style={{"height":"auto","background":"#ccc"}}>6</div>
-              <div className="item col-span-4" style={{"height":"auto","background":"#ccc"}}>4</div>
-            </div>
-
-            <div className="mtb-16" style={{"fontSize":"2rem"}}>예제) 샘플화면</div>
-            <div className="comm-Container-auto pb-24">
-              <div className="item col-span-4-auto" style={{"height":"auto","background":"#3CC13B"}}>
-                <div className="container grid-col-3 gap-16">
-                  <div className="item">모바일 0~599px</div>
-                  <div className="item">Small Tablet 600px ~ 1023px</div>
-                  <div className="item">Large Tablet 1024px ~ 1439px</div>
-                </div>
-              </div>
-              <div className="item col-span-4-auto" style={{"height":"auto","background":"#3CC13B"}}>
-                <div className="comm-Container-auto">
-                  <div className="item col-span-4-auto">모바일 0~599px</div>
-                  <div className="item col-span-4-auto">Small Tablet 600px ~ 1023px</div>
-                  <div className="item col-span-4-auto">Large Tablet 1024px ~ 1439px</div>
-                </div>
-              </div>
-              {/* <div className="item col-span-4-auto" style={{"height":"auto","background":"#3CC13B"}}>
-                <div className="container grid-col-5 gap-16">
-                  <div className="item">모바일 0~599px</div>
-                  <div className="item">Small Tablet 600px ~ 1023px</div>
-                  <div className="item">Large Tablet 1024px ~ 1439px</div>
-                  <div className="item">Desktop 1440px ~ 1920px</div>
-                  <div className="item">대표 기기 1440px</div>
-                </div>
-              </div> */}
-              <div className="item col-span-4-auto" style={{"height":"auto","background":"#3CC13B"}}>
-                <div className="comm-Container-auto">
-                  <div className="item col-span-6-auto">Small Tablet 600px ~ 1023px</div>
-                  <div className="item col-span-6-auto">Large Tablet 1024px ~ 1439px</div>
-                </div>
-              </div>
-            </div>
-            
           </div>
-
+          <div className="col-span-6-auto">
+            <div className="number-box">Code</div>
+            <div className="ex-code-area">
+              <p>
+                &lt;div className="fluid-body"&gt;<br/>
+                &nbsp;&nbsp;
+                &lt;div className="<b>container-auto</b> ptb-16 spBg"&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div className="item <b>col-span-4-auto</b>"&gt;1&lt;/div&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div className="item <b>col-span-4-auto</b>"&gt;2&lt;/div&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div className="item <b>col-span-4-auto</b>"&gt;3&lt;/div&gt;<br/>
+                &nbsp;&nbsp;
+                &lt;/div&gt;<br/>
+                &lt;/div&gt;
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
 
-      
 
+      <TopButton />
     </div>
+
     </>
   )
 }
 
-export default Grid;
+export default DemoLayoutGrid;

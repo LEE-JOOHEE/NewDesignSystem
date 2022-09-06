@@ -4,8 +4,8 @@ import reset from 'styled-reset';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./layout/Header";
 import Body from "./layout/Body";
-import Grid from "./common/Grid";
-import GridGap from "./contents/demoCode/gridGap";
+import DemoLayoutGrid from "./contents/demoCode/DemoLayoutGrid";
+import DemoGridGap from "./contents/demoCode/DemoGridGap";
 
 const GlobalStyles = createGlobalStyle`
   ${reset};
@@ -22,8 +22,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Body />} />
           <Route path="/document/*" element={<Body />} />
-          <Route path="/new" element={<Grid />} />
-          <Route path="/new/gridGap" element={<GridGap />} />
+          {/* <Route path="/new" element={<Grid />} /> */}
+          <Route path="/new/demoGridGap" element={<DemoGridGap />} />
+          <Route path="/new/demoLayoutGrid" element={<DemoLayoutGrid />} />
         </Routes>
       </BrowserRouter>
 
